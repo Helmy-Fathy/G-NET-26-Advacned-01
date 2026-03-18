@@ -96,6 +96,24 @@
              */
             #endregion
 
+            #region Q6
+            //Q6: What Is a Generic Interface? Write IRepository<T>
+            /*
+             A generic interface defines a contract using type parameters. 
+             Any class that implements it must specify the actual type, providing a reusable, type-safe abstraction.
+
+            public interface IRepository<T> where T : class
+            {
+                T?              GetById(int id);
+                IEnumerable<T>  GetAll();
+                void            Add(T entity);
+                void            Update(T entity);
+                void            Delete(int id);
+            }
+
+             */
+            #endregion
+
         }
     }
 }
