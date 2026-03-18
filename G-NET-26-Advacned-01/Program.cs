@@ -36,7 +36,29 @@
                 }
             }
             */
-        #endregion
+            #endregion
+
+            #region Q3
+            //Q3: What Are Multiple Type Parameters? Write Pair<TKey, TValue>
+            /*
+             A generic class can declare more than one type parameter. Each parameter is independently replaced when the class is instantiated.
+
+            public class Pair<TKey, TValue>
+            {
+                public TKey   Key   { get; set; }
+                public TValue Value { get; set; }
+
+                public Pair(TKey key, TValue value)
+                {
+                    Key   = key;
+                    Value = value;
+                }
+                public override string ToString()
+                    => $"[{Key}] = {Value}";
+            }
+             */
+            #endregion
+
+        }
     }
-}
 }
