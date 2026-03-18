@@ -366,6 +366,16 @@
              */
             #endregion
 
+            #region Q19
+            //Q19: How Can You Inherit from a Generic Class?
+            /*
+             Three Ways to Inherit
+             -	Open inheritance : subclass is also generic: class Stack<T> : Collection<T>
+             -	Closed inheritance : subclass fixes the type: class IntList : List<int>
+             -	Partially closed : fix some parameters: class StringDict<TValue> : Dictionary<string, TValue>
+             */
+            #endregion
+
         }
     }
 }
