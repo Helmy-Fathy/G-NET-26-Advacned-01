@@ -376,6 +376,85 @@
              */
             #endregion
 
+            #region Q20
+            //Q20: Complete Exercise — Generic Cache<TKey, TValue>
+            /*
+             public class CacheEntry<TValue>
+            {
+                public TValue    Value     { get; }
+                public DateTime  ExpiresAt { get; }
+
+                public CacheEntry(TValue value, TimeSpan ttl)
+                {
+                    Value     = value;
+                    ExpiresAt = DateTime.UtcNow.Add(ttl);
+                }
+	
+                public bool IsExpired => DateTime.UtcNow > ExpiresAt;
+            }
+
+            // Generic cache with expiration
+            public class Cache<TKey, TValue> where TKey : notnull
+            {
+                private readonly Dictionary<TKey, CacheEntry<TValue>> _store = new();
+                private readonly TimeSpan _defaultTtl;
+
+                public Cache(TimeSpan defaultTtl)
+                {
+                    _defaultTtl = defaultTtl;
+                }
+
+                // Add with default TTL
+                public void Add(TKey key, TValue value)
+                    => Add(key, value, _defaultTtl);
+
+                // Add with custom TTL
+                public void Add(TKey key, TValue value, TimeSpan ttl)
+                    => _store[key] = new CacheEntry<TValue>(value, ttl);
+
+                // Get item (returns default if missing or expired)
+                public TValue? Get(TKey key)
+                {
+                    if (_store.TryGetValue(key, out var entry))
+                    {
+                        if (entry.IsExpired)
+                        {
+                            _store.Remove(key);   // Lazy eviction
+                            return default;
+                        }
+                        return entry.Value;
+                    }
+                    return default;
+                }
+
+                // Remove an entry
+                public bool Remove(TKey key) => _store.Remove(key);
+
+                // Check if key exists and not expired
+                public bool Contains(TKey key)
+                {
+                    if (_store.TryGetValue(key, out var entry))
+                    {
+                        if (entry.IsExpired) { _store.Remove(key); return false; }
+                        return true;
+                    }
+                    return false;
+                }
+
+                // Remove all expired entries
+                public void Cleanup()
+                {
+                    var expired = new List<TKey>();
+                    foreach (var kvp in _store)
+                        if (kvp.Value.IsExpired) expired.Add(kvp.Key);
+                    foreach (var key in expired) _store.Remove(key);
+                }
+
+                public int Count => _store.Count;
+            }
+             */
+            #endregion
+
         }
     }
 }
