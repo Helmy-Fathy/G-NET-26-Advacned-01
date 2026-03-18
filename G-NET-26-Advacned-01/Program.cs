@@ -59,6 +59,24 @@
              */
             #endregion
 
+            #region Q4
+            //Q4: What Is a Generic Method? Write Swap<T> Method
+            /*
+             A generic method declares its own type parameter(s) independently of any containing class. 
+             The compiler can usually infer the type argument from the arguments you pass, so you rarely need to specify it explicitly.
+
+            public static class Utilities
+            {
+                public static void Swap<T>(ref T a, ref T b)
+                {
+                    T temp = a;
+                    a = b;
+                    b = temp;
+                }
+            }
+             */
+            #endregion
+
         }
     }
 }
