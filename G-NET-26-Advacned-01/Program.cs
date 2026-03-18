@@ -19,8 +19,24 @@
             #endregion
 
             #region Q2
-            //
-            #endregion
-        }
+            //Q2: Write a Generic Class Container<T> with Add and Get Methods
+            /*
+            public class Container<T>
+            {
+                private T _item;
+
+                public void Add(T item)
+                {
+                    _item = item;
+                }
+
+                public T Get()
+                {
+                    return _item;
+                }
+            }
+            */
+        #endregion
     }
+}
 }
