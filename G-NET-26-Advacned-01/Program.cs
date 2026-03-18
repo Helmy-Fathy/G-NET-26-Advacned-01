@@ -295,6 +295,31 @@
              */
             #endregion
 
+            #region Q14
+            //Q14: Write a SafeList<T> that Returns default When the Index Is Invalid
+            /*
+             public class SafeList<T>
+            {
+                private readonly List<T> _items = new();
+
+                public void Add(T item) => _items.Add(item);
+
+                public int Count => _items.Count;
+
+                // Returns default(T) instead of throwing for invalid index
+                public T Get(int index)
+                {
+                    if (index < 0 || index >= _items.Count)
+                        return default!;   // Safe fallback
+                    return _items[index];
+                }
+
+                // Indexer version
+                public T this[int index] => Get(index);
+            }
+             */
+            #endregion
+
         }
     }
 }
