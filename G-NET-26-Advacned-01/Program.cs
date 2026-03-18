@@ -248,6 +248,42 @@
              */
             #endregion
 
+            #region Q12
+            //Q12: How Do You Apply Multiple Constraints? Write an Example
+            /*
+             Rules for Multiple Constraints
+             -	Use a separate where clause for each type parameter.
+             -	Order within a single clause: class/struct first, then interfaces, then new() last.
+             -	A type parameter can have multiple interface constraints.
+
+            // Multiple constraints on one type parameter:
+            public class SortedRepository<T> where T : class, IComparable<T>, new()
+            {
+                private List<T> _items = new();
+
+                public void Add(T item) => _items.Add(item);
+
+                public List<T> GetSorted()
+                    => _items.OrderBy(x => x).ToList();
+
+                public T CreateNew() => new T();   // new() allows this
+            }
+
+            // Multiple type parameters with different constraints:
+            public class Mapper<TSource, TDest>
+                where TSource : class
+                where TDest   : class, new()
+            {
+                public TDest Map(TSource source)
+                {
+                    var dest = new TDest();    // new() on TDest
+                    // Copy properties via reflection...
+                    return dest;
+                }
+            }
+             */
+            #endregion
+
         }
     }
 }
