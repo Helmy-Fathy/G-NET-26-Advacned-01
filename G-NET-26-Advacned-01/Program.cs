@@ -320,6 +320,16 @@
              */
             #endregion
 
+            #region Q15
+            //Q15: What Is Covariance? Explain the 'out' Keyword
+            /*
+             Covariance allows a generic interface to be treated as if it works with a more derived (child) type. 
+             It is marked with the out keyword. T can only appear in output (return) positions — it cannot be used as a method parameter.
+             Memory aid: out = output = producer = covariant = Dog → Animal (child can be used where parent expected).
+             */
+
+            #endregion
+
         }
     }
 }
