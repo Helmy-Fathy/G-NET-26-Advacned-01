@@ -339,6 +339,25 @@
              */
             #endregion
 
+            #region Q17
+            //Q17: What Is the Difference Between Covariance and Contravariance?
+            /*
+             Covariance (out):->
+            - Direction :	Derived → Base (Dog → Animal)
+            - T position :	Output only (return type)
+            - Keyword :	out
+            - Think of as	: Producer of T
+            - Example	: IEnumerable<out T>, Func<out T>
+
+            Contravariance (in):->
+            - Direction :	Base → Derived (Animal → Dog)
+            - T position :	Input only (method parameter)
+            - Keyword :	in
+            - Think of as	: Consumer of T
+            - Example	: Action<in T>, IComparer<in T>
+             */
+            #endregion
+
         }
     }
 }
