@@ -211,6 +211,43 @@
 
             #endregion
 
+            #region Q11
+            //Q11: What Is the Base Class Constraint? Write an Example
+            /*
+             The base class constraint (where T : SomeBaseClass) restricts T to the specified class or any of its derived classes. This lets you use members of the base class within the generic type.
+
+            public abstract class Shape
+            {
+                public abstract double Area();
+            }
+
+            public class Circle : Shape
+            {
+                public double Radius { get; set; }
+                public override double Area() => Math.PI * Radius * Radius;
+            }
+
+            public class Rectangle : Shape
+            {
+                public double Width { get; set; }
+                public double Height { get; set; }
+                public override double Area() => Width * Height;
+            }
+
+            // Base class constraint: T must be or inherit from Shape
+            public class ShapeCollection<T> where T : Shape
+            {
+                private List<T> _shapes = new();
+                public void Add(T shape) => _shapes.Add(shape);
+
+                // Can call Area() because T : Shape
+                public double TotalArea()
+                    => _shapes.Sum(s => s.Area());
+            }
+
+             */
+            #endregion
+
         }
     }
 }
