@@ -136,6 +136,30 @@
              */
             #endregion
 
+            #region Q8
+            //Q8: What Is the 'class' Constraint? Write an Example
+
+            /*
+             The class constraint (where T : class) restricts T to reference types only (classes, interfaces, delegates, arrays). 
+
+            public class Repository<T> where T : class
+            {
+                private readonly List<T> _store = new();
+
+                public void Add(T item)
+                {
+                    if (item == null) throw new ArgumentNullException(nameof(item));
+                    _store.Add(item);
+                }
+
+                // Can return null safely because T is a reference type
+                public T? Find(Predicate<T> match) => _store.Find(match);
+
+                public int Count => _store.Count;
+            }
+             */
+            #endregion
+
         }
     }
 }
