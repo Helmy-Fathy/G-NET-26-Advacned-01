@@ -284,6 +284,17 @@
              */
             #endregion
 
+            #region Q13
+            //Q13: What Does the 'default' Keyword Do in Generics?
+            /*
+             The default keyword returns the default value for a type T without knowing what T is at compile time:
+             -	Reference types (class, string, interface): returns null
+             -	Numeric types (int, double, etc.): returns 0
+             -	bool: returns false
+             -	struct types: returns a zero-initialized struct
+             */
+            #endregion
+
         }
     }
 }
