@@ -358,6 +358,14 @@
              */
             #endregion
 
+            #region Q18
+            //Q18: How Do Static Members Work in Generic Types?
+            /*
+             Each closed generic type — e.g., Counter<int> and Counter<string> — gets its OWN set of static members. 
+             Static state is NOT shared across different type arguments.
+             */
+            #endregion
+
         }
     }
 }
