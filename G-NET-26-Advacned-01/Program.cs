@@ -114,6 +114,28 @@
              */
             #endregion
 
+            #region Q7
+            //Q7: What Is the 'struct' Constraint? Write an Example
+            /*
+            The struct constraint (where T : struct) restricts T to value types only (int, double, bool, DateTime, custom structs, etc.). 
+
+            public class Nullable<T> where T : struct
+            {
+                private T?   _value;
+                public bool  HasValue => _value.HasValue;
+
+                public void SetValue(T value) => _value = value;
+
+                public T GetValue()
+                {
+                    if (!HasValue)
+                        throw new InvalidOperationException("No value set.");
+                    return _value!.Value;
+                }
+            }
+             */
+            #endregion
+
         }
     }
 }
