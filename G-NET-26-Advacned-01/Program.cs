@@ -160,6 +160,32 @@
              */
             #endregion
 
+            #region Q9
+            //Q9: What Is the 'new()' Constraint? Write an Example
+            /*
+             The new() constraint (where T : new()) requires T to have a public parameterless constructor. This allows you to create instances of T inside the generic class/method using new T().
+
+            public class Factory<T> where T : new()
+            {
+                // Can safely call new T() because of the constraint
+                public T Create() => new T();
+
+                public List<T> CreateMany(int count)
+                {
+                    var list = new List<T>();
+                    for (int i = 0; i < count; i++)
+                        list.Add(new T());
+                    return list;
+                }
+            }
+
+            public class Product
+            {
+                public string Name { get; set; } = "Default Product";
+            }
+             */
+            #endregion
+
         }
     }
 }
