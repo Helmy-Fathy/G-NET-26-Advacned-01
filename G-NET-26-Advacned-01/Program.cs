@@ -186,6 +186,31 @@
              */
             #endregion
 
+            #region Q10
+            //Q10: What Is the Interface Constraint? Write an Example
+            /*
+             The interface constraint restricts T to types that implement a specific interface. This allows the generic code to call interface members on T.
+
+            public static class Sorter
+            {
+                public static T[] BubbleSort<T>(T[] array) where T : IComparable<T>
+                {
+                    T[] result = (T[])array.Clone();
+                    for (int i = 0; i < result.Length - 1; i++)
+                        for (int j = 0; j < result.Length - 1 - i; j++)
+                            if (result[j].CompareTo(result[j + 1]) > 0)
+                            {
+                                T temp      = result[j];
+                                result[j]   = result[j + 1];
+                                result[j+1] = temp;
+                            }
+                    return result;
+                }
+            }
+             */
+
+            #endregion
+
         }
     }
 }
