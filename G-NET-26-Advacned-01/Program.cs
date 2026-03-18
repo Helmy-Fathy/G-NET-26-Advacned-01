@@ -330,6 +330,15 @@
 
             #endregion
 
+            #region Q16
+            //Q16: What Is Contravariance? Explain the 'in' Keyword
+            /*
+             Contravariance allows a generic interface to be treated as if it works with a less derived (parent) type. 
+             It is marked with the in keyword. T can only appear in input (parameter) positions — it cannot be used as a return type.
+             in = input = consumer = contravariant = Animal → Dog (parent can be used where child expected).
+             */
+            #endregion
+
         }
     }
 }
